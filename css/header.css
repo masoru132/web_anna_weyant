@@ -1,0 +1,86 @@
+.main-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px dotted white;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.artist-logo {
+    color: white;
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: opacity 0.3s;
+}
+
+.artist-logo:hover {
+    opacity: 0.7;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s;
+    text-transform: uppercase;
+}
+
+.navbar-menu a:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        padding: 0 20px;
+    }
+    
+    .artist-logo {
+        font-size: 1.2em;
+    }
+    
+    .navbar-menu {
+        position: static;
+        transform: none;
+        gap: 20px;
+    }
+    
+    .navbar-menu a {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .navbar-menu {
+        gap: 15px;
+    }
+}

@@ -1,0 +1,118 @@
+@import url('reset.css');
+@import url('base.css');
+
+div {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    z-index: 1000;
+    text-align: center;
+    pointer-events: none;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    flex-grow: 1;
+}
+
+nav a {
+    color: white;
+    height: 100dvh;
+    display: block;
+    position: relative;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav a>span {
+    display: inline-block;
+    position: absolute;
+    width: 100vh;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(-90deg) translate(100px);
+    transform-origin: left center;
+}
+
+nav span span {
+    display: inline-block;
+    position: relative;
+}
+
+nav span span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 110%;
+    left: -5%;
+    top: calc(50% + 3px);
+    border-bottom: 1px dashed white;
+    transform: rotate(-1deg);
+    transition: transform 0.5s, width 0.5s, left 0.5s;
+}
+
+nav a:hover span::before {
+    transform: rotate(6deg);
+    width: 130%;
+    left: -15%;
+}
+
+section {
+    height: 100dvh;
+    background: url(../multimedia/img/index/01K0TW845EKCBH2XW80KQVVQAK.png) no-repeat center / 100vmin;
+    ;
+    background-attachment: fixed;
+}
+
+section:nth-child(2) {
+    background-image: url(../multimedia/img/index/Anna-Weyant-FT.jpg);
+}
+
+section:nth-child(3) {
+    background-image: url(../multimedia/img/index/drives_me_crazy.jpg);
+}
+
+section:nth-child(4) {
+    background-image: url(../multimedia/img/index/Weyant_Agonia.jpg);
+}
+
+section:nth-child(5) {
+    background-image: url(../multimedia/img/index/Weyant_Festejada.jpg);
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    nav a {
+        font-size: 1.5em;
+    }
+}
